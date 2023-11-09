@@ -9,14 +9,10 @@ export default function TabButton(props) {
 */
 
 /* Alternative 2 */
-export default function TabButton({children}) {
-    function handleClick() {
-        console.log('Clicked');
-    };
-
+export default function TabButton({children, onSelect}) {
     return (
         <li>
-            <button onClick={handleClick} >{children}</button>
+            <button onClick={onSelect} >{children}</button>
         </li>
     );
 }
