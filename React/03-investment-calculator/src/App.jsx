@@ -18,7 +18,7 @@ function handleChange(inputIdentifier, newValue){
   setUserInput(prevUserInput => {
       return{
           ...prevUserInput,
-          [inputIdentifier]: newValue
+          [inputIdentifier]: +newValue, // "+" force converstion of string value to number value
       };
   });
 }
