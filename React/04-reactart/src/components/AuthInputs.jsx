@@ -38,7 +38,7 @@ const Button = styled.button`
   border-radius: 6px;
   border: none;
 
-  &:hover {
+  &:hover { // don't use white space between & and :hover
     background-color: #f0920e;
   }
 `
@@ -89,7 +89,7 @@ export default function AuthInputs() {
         <button type="button" className="text-button">
           Create a new account
         </button>
-        <Button className='button' onClick={handleLogin}>Sign In</Button>
+        <Button onClick={handleLogin}>Sign In</Button>
       </div>
     </div>
   );
