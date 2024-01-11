@@ -7,7 +7,7 @@ const ResultModal =  forwardRef(function ResultModal({result, targetTime}, ref){
             <p>The target time was <strong>{targetTime} seconds.</strong></p>
             <p>You stopped the timer with <strong>X seconds left.</strong></p>
             <form method="dialog">
-                <button>Cloes</button>
+                <button>Close</button>
             </form>
         </dialog>
     );
