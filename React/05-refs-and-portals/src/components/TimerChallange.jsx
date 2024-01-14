@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+
 import ResultModal from "./ResultModal.jsx";
 
 export default function TimerChallange({ title, targetTime }) {
@@ -6,15 +7,16 @@ export default function TimerChallange({ title, targetTime }) {
   const dialog = useRef();
 
   const [timeRemaining, setTimeRemaining] = useState(targetTime*1000);
-
+  
   const timerIsActive = timeRemaining > 0 && timeRemaining < targetTime * 1000;
+  
 
   if(timeRemaining <= 0) {
     clearInterval(timer.current);
     setTimeRemaining(targetTime *1000);
     dialog.current.open();
   }
-
+ 
   function handleStart() {
     timer.current = setInterval(() => {
       setTimeRemaining(prevTimeRemaining => prevTimeRemaining - 10);
